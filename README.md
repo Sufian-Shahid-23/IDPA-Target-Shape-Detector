@@ -109,15 +109,6 @@ idpa-target-detector/
 ├── target_detector.ipynb       # Main Jupyter notebook
 ├── requirements.txt            # Python dependencies
 ├── README.md                   # This file
-│
-├── images/                     # Put your target photos here
-│   ├── target_01.jpg
-│   ├── target_02.png
-│   └── ...
-│
-└── output/                     # Optional: save annotated results here
-```
-
 ---
 
 ## ⚙️ Installation & Setup
@@ -155,18 +146,12 @@ pip install -r requirements.txt
 
 ### Step 4 — Add your images
 
-Place your target photos in the `images/` folder. Supported formats: `.jpg`, `.jpeg`, `.png`, `.bmp`, `.tiff`, `.webp`
+Place your target photos in the image path at the top. Supported formats: `.jpg`, `.jpeg`, `.png`, `.bmp`, `.tiff`, `.webp`
 
 ### Step 5 — Run the notebook
 
 ```bash
 jupyter notebook target_detector.ipynb
-```
-
-Then in the notebook, set your folder path at the top of the main loop cell:
-
-```python
-IMAGE_FOLDER = './images'   # path to your images folder
 ```
 
 Run all cells. All detected shapes will be displayed in one grid at the end.
