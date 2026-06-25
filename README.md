@@ -37,7 +37,8 @@ Given a folder of target photos — including heavily angled shots, varying reso
 | Shape | Description |
 |---|---|
 | **Outer body silhouette** | Large concave polygon with neck cutout and angled corners |
-| **Inner torso ring** | Smaller octagon inside the body outline |
+| **torso ring** | big octagon inside the body outline |
+| **Inner torso ring** | Smaller octagon inside the torso |
 | **Head rectangle** | Rectangle at the top connected to the neck |
 | **Torso circle** | Large circle in the center chest zone (black or green fill) |
 | **Head circle** | Small circle inside the head rectangle |
@@ -49,7 +50,7 @@ Given a folder of target photos — including heavily angled shots, varying reso
 ```
 ┌─────────────┐    ┌──────────────┐    ┌─────────────────────────────────────┐
 │  Load Image │───▶│    Resize    │───▶│         deskew_if_needed()          │
-│  (folder)   │    │ (keep ratio) │    │  A: Rotation via polygon edge angle  │
+│             │    │ (keep ratio) │    │  A: Rotation via polygon edge angle  │
 └─────────────┘    └──────────────┘    │  B: Auto-zoom via polygon fill ratio │
                                        │  C: Perspective via circle ellipse   │
                                        └─────────────────┬───────────────────┘
@@ -146,7 +147,9 @@ pip install -r requirements.txt
 
 ### Step 4 — Add your images
 
+```bash
 Place your target photos in the image path at the top. Supported formats: `.jpg`, `.jpeg`, `.png`, `.bmp`, `.tiff`, `.webp`
+```
 
 ### Step 5 — Run the notebook
 
